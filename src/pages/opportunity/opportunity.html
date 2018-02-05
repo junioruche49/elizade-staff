@@ -1,0 +1,133 @@
+<!--
+  Generated template for the OpportunityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Opportunity Management</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="submit(f)" #f="ngForm">
+	<ion-list>
+		<ion-item>
+			<h3>Opportunity topic</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Opportunity topic"
+				name="topic"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Customer’s account number</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Customer’s account number"
+				name="customer"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Dimension</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Dimension"
+			name="dimension"
+			ngModel
+			required>
+				<ion-option value="Sales & Marketing">Sales & Marketing</ion-option>
+				<ion-option value="Aftersales">Aftersales</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Estimated Close Date</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-datetime 
+					displayFormat="MMM DD, YYYY"
+					placeholder="Estimated Close Date"
+					name="estCloseDate" 
+					ngModel 
+					required></ion-datetime>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Probability</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="number"
+				placeholder="Probability"
+				name="probability" 
+				ngModel 
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Rating</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Rating"
+			name="rating"
+			ngModel
+			required>
+				<ion-option value="Hot">Hot</ion-option>
+				<ion-option value="Warm">Warm</ion-option>
+				<ion-option value="Cold">Cold</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Salesperson’s name </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Salesperson’s name"
+			name="salespersons"
+			ngModel
+			required>
+				<ion-option *ngFor="let salesperson of salespersons; let i = index" [value]="salesperson">{{salesperson}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Description</h3>
+			</ion-item>
+			<ion-item>
+				<ion-label floating></ion-label>
+				<ion-textarea name="description"
+					  placeholder="Description"
+					  required
+					  ngModel
+					#myInput
+					(keyup)="resize()"></ion-textarea>
+			</ion-item>
+			<br />
+			<br />
+	</ion-list>
+	<button ion-button color="danger" block [disabled]="!f.valid">Creat Opportunity</button>
+	</form>
+</ion-content>

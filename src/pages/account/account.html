@@ -1,0 +1,233 @@
+<!--
+  Generated template for the AccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="submit(f)" #f="ngForm">
+	<ion-list>
+		<ion-item>
+			<h3>Customer’s Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Customer’s Name"
+				name="accountName"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Email Address of Customer</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Email Address of Customer"
+				name="email"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Phone Number of Customer</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Phone Number of Customer"
+				name="phone"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<ion-item>
+				<h3>Country  </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Country"
+			name="country"
+			ngModel
+			required>
+				<ion-option *ngFor="let country of countries; let i = index" [value]="country">{{country}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>State</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="State"
+			name="state"
+			ngModel
+			required>
+				<ion-option *ngFor="let state of states; let i = index" [value]="state">{{state}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Account Type</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Account Type"
+			name="acctType"
+			ngModel
+			required>
+				<ion-option value="Potential">Potential</ion-option>
+				<ion-option value="Actual">Actual</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Customer Class </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Customer Class"
+			name="custClass"
+			ngModel
+			required>
+				<ion-option value="High Fleet">High Fleet</ion-option>
+				<ion-option value="Medium Fleet">Medium Fleet</ion-option>
+				<ion-option value=" Low Fleet"> Low Fleet</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Customer Category</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Customer Category"
+			name="custCategory"
+			ngModel
+			required>
+				<ion-option value="Individual">Individual</ion-option>
+				<ion-option value="Corporate">Corporate</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Origin of Customer</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Origin of Customer"
+			name="origin"
+			ngModel
+			required>
+				<ion-option value="Elizade">Elizade</ion-option>
+				<ion-option value="Others">Others</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Department name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Department name"
+			name="department"
+			ngModel
+			required>
+				<ion-option *ngFor="let department of departments; let i = index" [value]="department">{{department}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Branch name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Branch name"
+			name="branch"
+			ngModel
+			required>
+				<ion-option *ngFor="let branch of branches; let i = index" [value]="branch">{{branch}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Business Sector name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Business Sector name"
+			name="bizSector"
+			ngModel
+			required>
+				<ion-option *ngFor="let business of businessSector; let i = index" [value]="business">{{business}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>General Business Posting Group</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="General Business Posting Group"
+			name="genbizgrp"
+			ngModel
+			required>
+				<ion-option *ngFor="let generalpost of generalposting; let i = index" [value]="generalpost">{{generalpost}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Customer Business Posting Group</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Customer Business Posting Group"
+			name="custPostGrp"
+			ngModel
+			required>
+				<ion-option *ngFor="let customerpost of customerposting; let i = index" [value]="customerpost">{{customerpost}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Vat Business Posting Group</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Vat Business Posting Group"
+			name="vatPostGrp"
+			ngModel
+			required>
+				<ion-option *ngFor="let vat of vatbusiness; let i = index" [value]="vat">{{vat}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+	</ion-list>
+	<button ion-button color="danger" block [disabled]="!f.valid">Send</button>
+	</form>
+</ion-content>

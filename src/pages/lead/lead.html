@@ -1,0 +1,214 @@
+<!--
+  Generated template for the LeadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Lead Management</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="submit(f)" #f="ngForm">
+	<ion-list>
+		<ion-item>
+			<h3>Company Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Company Name"
+				name="companyName"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>First Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="First Name"
+				name="firstname"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Last Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Last Name"
+				name="lastname"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Category</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Category"
+			name="category"
+			ngModel
+			required>
+				<ion-option value="Individual">Individual</ion-option>
+				<ion-option value="Corporate">Corporate</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Business Sector</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Business Sector"
+			name="bizSector"
+			ngModel
+			required>
+				<ion-option *ngFor="let business of businessSector; let i = index" [value]="business">{{business}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Email Address</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Email Address"
+				name="email"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Business Phone Number</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Business Phone Number"
+				name="bizPhone"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Mobile Phone Number</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Mobile Phone Number"
+				name="mobilePhone"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Department of the salesperson</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Department of the salesperson"
+			name="department"
+			ngModel
+			required>
+				<ion-option *ngFor="let department of departments; let i = index" [value]="department">{{department}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Dimension</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Dimension"
+			name="dimension"
+			ngModel
+			required>
+				<ion-option value="Sales & Marketing">Sales & Marketing</ion-option>
+				<ion-option value="Aftersales">Aftersales</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Branch of the salesperson </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Branch of the salesperson"
+			name="branch"
+			ngModel
+			required>
+			<ion-option *ngFor="let branch of branches; let i = index" [value]="branch">{{branch}}</ion-option>
+				
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>State </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="State"
+			name="state"
+			ngModel
+			required>
+				
+				<ion-option *ngFor="let state of states; let i = index" [value]="state">{{state}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Product/Service of interest</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Product/Service of interest"
+				name="prodOrService"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+				<h3>Likely date of purchase</h3>
+			</ion-item>
+			<ion-item>
+				<ion-label floating></ion-label>
+				<ion-datetime 
+					displayFormat="MMM DD, YYYY"
+					placeholder="Likely date of purchase"
+					name="purchaseDate" 
+					ngModel 
+					required></ion-datetime>
+			</ion-item>
+		<br><br>
+	</ion-list>
+	<button ion-button color="danger" block [disabled]="!f.valid">Create Lead</button>
+	</form>
+</ion-content>

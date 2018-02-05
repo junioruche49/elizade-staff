@@ -1,0 +1,37 @@
+<!--
+  Generated template for the OrdersviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{ orders.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-col col-12>
+			<h4>Descriptive name for order:</h4>
+			<hr>
+			{{ orders.name }}
+			<br><br><br>
+		</ion-col>
+		<ion-col col-12>
+			<h4>Customer’s account number:</h4>
+			<hr>
+			{{ orders.customer }}
+			<br><br><br>
+		</ion-col>
+		<ion-col col-12>
+			<h4>Department name:</h4>
+			<hr>
+			{{ orders.department }}
+			<br><br><br>
+		</ion-col>
+	</ion-grid>
+</ion-content>

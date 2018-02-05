@@ -1,0 +1,46 @@
+<ion-content padding>
+	<form (ngSubmit)="signin(f)"  #f="ngForm">
+		<ion-grid class="scroll-content">
+		 	<ion-row>
+		 		<ion-col text-center>
+		 			<img src="assets/imgs/elizade.png" class="img">
+		 		</ion-col>
+		 	</ion-row>
+		 		<ion-list>
+		 			<ion-item>
+		 				<ion-label floating>Username</ion-label>
+		 				<ion-input 
+			 				type="text" 
+			 				name="email"
+			 				ngModel
+			 				required></ion-input>
+		 			</ion-item>
+		 			<ion-item>
+		 				<ion-label floating>Password</ion-label>
+		 				<ion-input 
+		 					type="password" 
+		 					name="password"
+		 					ngModel
+		 					required></ion-input>
+		 			</ion-item>
+		 		</ion-list>
+		 	<ion-row>
+		 		<button 
+		 			type="submit" 
+		 			ion-button 
+		 			block 
+		 			color="primary"
+		 			[disabled]="!f.valid">Sign In</button>
+		 		<ion-col text-center>
+		 			<button 
+		 			ion-button
+		 			block 
+		 			clear 
+		 			color="dark"
+		 			type="button"
+		 			(click)="forgot()">Forgot Password?</button>
+		 		</ion-col>
+		 	</ion-row>
+		 </ion-grid>
+	</form>
+</ion-content>

@@ -1,0 +1,119 @@
+<!--
+  Generated template for the QuotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Quote</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="submit(f)" #f="ngForm">
+	<ion-list>
+		<ion-item>
+			<h3>Descriptive Name for a Quote</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Name for Quote"
+				name="name"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Price list name </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Price list name "
+			name="priceList"
+			ngModel
+			required>
+				<ion-option *ngFor="let price of pricelist; let i = index" [value]="price">{{price}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Dimension Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Dimension"
+			name="dimension"
+			ngModel
+			required>
+				<ion-option value="Sales & Marketing">Sales & Marketing</ion-option>
+				<ion-option value="Aftersales">Aftersales</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Department Name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Department Name"
+			name="department"
+			ngModel
+			required>
+				<ion-option *ngFor="let department of departments; let i = index" [value]="department">{{department}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Salesperson’s name </h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Salesperson’s name"
+			name="salespersons"
+			ngModel
+			required>
+				<ion-option *ngFor="let salesperson of salespersons; let i = index" [value]="salesperson">{{salesperson}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Branch name</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+			placeholder="Branch name"
+			name="branch"
+			ngModel
+			required>
+			<ion-option *ngFor="let branch of branches; let i = index" [value]="branch">{{branch}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<br><br>
+		<ion-item>
+			<h3>Customer’s account number</h3>
+		</ion-item>
+		<ion-item>
+			<ion-label floating></ion-label>
+			<ion-input 
+				type="text"
+				placeholder="Customer’s account number"
+				name="customerNumber"
+				ngModel
+				required></ion-input>
+		</ion-item>
+		<br><br>
+	</ion-list>
+	<button ion-button color="danger" block>Send</button>
+	</form>
+</ion-content>

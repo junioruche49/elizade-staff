@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,12 +7,33 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-row>
+    <ion-col col-6 text-center class="lead" (click)="gotopage(leadpage)">
+      <ion-icon name="document"></ion-icon>
+      <h6>Lead Management</h6>
+    </ion-col>
+    <ion-col col-6 text-center class="opportunities" (click)="gotopage(opportunity)">
+      <ion-icon name="archive"></ion-icon>
+      <h6>Opportunities</h6>
+    </ion-col>
+    <ion-col col-6 text-center class="account" (click)="gotopage(account)">
+      <ion-icon name="person-add"></ion-icon>
+      <h6>Account</h6>
+    </ion-col>
+    <ion-col col-6 text-center class="orders" (click)="gotopage(order)">
+      <ion-icon name="clipboard"></ion-icon>
+      <h6>Orders</h6>
+    </ion-col>
+    <ion-col col-6 text-center class="quotes" (click)="gotopage(quote)">
+      <ion-icon name="list-box"></ion-icon>
+      <h6>Quotes Management</h6>
+    </ion-col>
+    <ion-col col-6 text-center class="contact" (click)="gotopage(contact)">
+      <ion-icon name="contact"></ion-icon>
+      <h6>Contact</h6>
+    </ion-col>
+  </ion-row>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

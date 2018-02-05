@@ -1,0 +1,28 @@
+page-signup {
+	img{
+		width: 120px;
+		margin-bottom: 40px;
+	}
+	.scroll-content{
+		align-content: center;
+		justify-content: center
+	}
+	ion-list{
+		border-top: none;
+	}
+	.item-block:first-child{
+		border-top: none !important;
+	}
+	.item-block:last-child{
+		border-bottom: none !important;
+	}
+	.item-block .item-inner, .item-wrapper .item-block .item-inner{
+		border-bottom: 0.55px solid red !important;
+	}
+	.item-block .item-inner, .item-wrapper .item-block .item-inner{
+		border-bottom: 0.55px solid red !important;
+	}
+	ion-item{
+		padding-left: 0px !important;
+	}
+}

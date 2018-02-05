@@ -1,0 +1,52 @@
+<ion-content padding>
+	<ion-grid class="scroll-content">
+ 	<form (ngSubmit)="submit(f)" #f="ngForm">
+ 	<ion-row>
+ 		<ion-col text-center>
+ 			<img src="assets/imgs/elizade.png" class="img">
+ 		</ion-col>
+ 	</ion-row>
+ 		<ion-list>
+ 			<ion-item>
+ 				<ion-label floating>Customer Number</ion-label>
+ 				<ion-input 
+ 					type="text" 
+ 					name="customer_number"
+ 					ngModel
+ 					required></ion-input>
+ 			</ion-item>
+ 			<ion-item>
+ 				<ion-label floating>Email</ion-label>
+ 				<ion-input 
+ 					type="text" 
+ 					name="email"
+ 					ngModel
+ 					email
+ 					required></ion-input>
+ 			</ion-item>
+ 			<ion-item>
+ 				<ion-label floating>Password</ion-label>
+ 				<ion-input 
+ 					type="password" 
+ 					name="password"
+ 					ngModel
+ 					required
+ 					#firstpassword></ion-input>
+ 			</ion-item>
+ 			<ion-item>
+ 				<ion-label floating>Confirm Password</ion-label>
+ 				<ion-input 
+ 					type="password" 
+ 					name="confirmpassword"
+ 					ngModel
+ 					required 
+ 					#secondpassword></ion-input>
+ 			</ion-item>
+ 		</ion-list>
+ 	<ion-row>
+ 		<button ion-button block color="primary" type="submit" [disabled]="!f.valid">Sign Up</button>
+ 		<button ion-button block outline type="button" color="primary" (click)="singin()">Already a User?</button>
+ 	</ion-row>
+ 	</form>
+ </ion-grid>
+</ion-content>
