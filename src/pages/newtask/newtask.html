@@ -38,7 +38,7 @@
 		required
 		ngModel></ion-textarea>
 	</ion-item>
-	<br>
+	<br><br>
 	<ion-item>
 		<h4>Date/Time</h4>
 	</ion-item>
@@ -50,6 +50,21 @@
 			ngModel 
 			required></ion-datetime>
 	</ion-item>
+	<br><br>
+	<ion-item>
+			<ion-label floating></ion-label>
+			<ion-select 
+				placeholder="Regarding" 
+				name="location" 
+				ngModel 
+				required>
+				<ion-option>Lead Management</ion-option>
+				<ion-option>Opportunities</ion-option>
+				<ion-option>Account</ion-option>
+				<ion-option>Orders</ion-option>
+				<ion-option>Quotes Management</ion-option>
+			</ion-select>
+		</ion-item>
 	</ion-list>
 	<button color="danger" ion-button block type="submit">Add Task</button>
 </ion-content>
