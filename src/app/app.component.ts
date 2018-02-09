@@ -14,6 +14,7 @@ import { OrdershistoryPage } from '../pages/ordershistory/ordershistory'
 import { QuoteshistoryPage } from '../pages/quoteshistory/quoteshistory'
 import { ContacthistoryPage } from '../pages/contacthistory/contacthistory'
 import { SigninPage } from '../pages/signin/signin';
+import { TaskPage } from '../pages/task/task'
 
 import { Users } from '../services/users.service'
 
@@ -128,7 +129,8 @@ export class MyApp {
       { title: 'Account History', component: AccounthistoryPage, icon: 'person-add' },
       { title: 'Orders History', component: OrdershistoryPage, icon: 'clipboard' },
       { title: 'Quotes Management History', component: QuoteshistoryPage, icon: 'list-box' },
-      { title: 'Contact History', component: ContacthistoryPage, icon: 'contact' }
+      { title: 'Contact History', component: ContacthistoryPage, icon: 'contact' },
+      { title: 'Task', component: TaskPage, icon: 'list' }
     ];
 
   }

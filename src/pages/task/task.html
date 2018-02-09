@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row (click)="viewTask()">
+			<ion-col col-9>
+				<h6>Meeting with Group Manager</h6>
+				<ion-note> <ion-icon name="calendar" style="font-size: 18px"></ion-icon> 12th Feb</ion-note>
+			</ion-col>
+			<ion-col col-3>
+				<ion-icon name="arrow-round-forward"></ion-icon>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-fab right bottom>
+    <button ion-fab color="danger" (click)="addtask()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

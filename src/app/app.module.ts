@@ -28,6 +28,9 @@ import { QuoteviewPage } from '../pages/quoteview/quoteview'
 import { ContactviewPage } from '../pages/contactview/contactview'
 import { SigninPage } from '../pages/signin/signin'
 import { SignupPage } from '../pages/signup/signup'
+import { TaskPage } from '../pages/task/task'
+import { TaskviewPage } from '../pages/taskview/taskview'
+import { NewtaskPage } from '../pages/newtask/newtask'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -58,7 +61,10 @@ import { Users } from '../services/users.service'
     QuoteviewPage,
     ContactviewPage,
     SigninPage,
-    SignupPage
+    SignupPage,
+    TaskPage,
+    TaskviewPage,
+    NewtaskPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +100,10 @@ import { Users } from '../services/users.service'
     QuoteviewPage,
     ContactviewPage,
     SigninPage,
-    SignupPage
+    SignupPage,
+    TaskPage,
+    TaskviewPage,
+    NewtaskPage
   ],
   providers: [
     StatusBar,
