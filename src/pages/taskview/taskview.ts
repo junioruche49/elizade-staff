@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Task } from '../../models/task.model'
 
 /**
  * Generated class for the TaskviewPage page.
@@ -14,8 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'taskview.html',
 })
 export class TaskviewPage {
+	task: Task;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	this.task = this.navParams.get('task');
   }
 
   ionViewDidLoad() {

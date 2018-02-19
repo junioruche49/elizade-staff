@@ -7,6 +7,7 @@ import { accountModel } from '../models/account.model'
 import { ordersModel } from '../models/orders.model'
 import { quotesModel } from '../models/quotes.model'
 import { contactModel } from '../models/contact.model'
+import { Task } from '../models/task.model'
 
 @Injectable()
 
@@ -17,6 +18,8 @@ export class formService{
   			  public http: HttpClient){}
 
 	private lead : leadModel[] = [];
+
+	private task: Task[] = [];
 
 	private opportunity: opportunityModel[] = []
 
@@ -84,9 +87,13 @@ export class formService{
 	}
 
 
+	addTask(task: Task){
+		this.task.push(task);
+	}
 
-
-
+	getTask(){
+		return this.task;
+	}
 
 
 

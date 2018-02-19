@@ -31,6 +31,8 @@ import { SignupPage } from '../pages/signup/signup'
 import { TaskPage } from '../pages/task/task'
 import { TaskviewPage } from '../pages/taskview/taskview'
 import { NewtaskPage } from '../pages/newtask/newtask'
+import { TaskmodalPage } from '../pages/taskmodal/taskmodal'
+import { ExpandableComponent } from '../components/expandable/expandable'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -64,7 +66,9 @@ import { Users } from '../services/users.service'
     SignupPage,
     TaskPage,
     TaskviewPage,
-    NewtaskPage
+    NewtaskPage,
+    TaskmodalPage,
+    ExpandableComponent
   ],
   imports: [
     BrowserModule,
@@ -103,7 +107,9 @@ import { Users } from '../services/users.service'
     SignupPage,
     TaskPage,
     TaskviewPage,
-    NewtaskPage
+    NewtaskPage,
+    TaskmodalPage,
+    ExpandableComponent
   ],
   providers: [
     StatusBar,

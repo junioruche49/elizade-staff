@@ -1,0 +1,11 @@
+page-taskmodal {
+	button {
+            align-items: baseline;
+        }
+    ion-icon{
+    	height: 0 !important;
+    }
+    ion-list {
+        transition: 0.2s linear;
+    }
+}

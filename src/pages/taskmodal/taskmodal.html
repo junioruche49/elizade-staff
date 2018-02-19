@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Select Options</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row (click)="expandItem(item.name)" *ngFor="let item of items">
+			<ion-col col-10>
+				<h6>{{ item.name }}</h6>
+			</ion-col>
+			<ion-col col-2>
+				<ion-icon name="arrow-round-forward" item-right></ion-icon>
+			</ion-col>
+			<ion-col col-12 *ngIf="element == item.name">
+				<ion-list radio-group>
+				  <ion-item>
+				    <ion-label>Friends</ion-label>
+				    <ion-radio value="friends"></ion-radio>
+				  </ion-item>
+				  <ion-item>
+				    <ion-label>Family</ion-label>
+				    <ion-radio value="family"></ion-radio>
+				  </ion-item>
+				  <ion-item>
+				    <ion-label>Enemies</ion-label>
+				    <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
+				  </ion-item>
+				</ion-list>
+			</ion-col>
+			<ion-col col-12>
+				<hr>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

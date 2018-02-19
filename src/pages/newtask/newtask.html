@@ -14,6 +14,7 @@
 
 
 <ion-content padding>
+	<form (ngSubmit)="submit(f)" #f="ngForm">
 	<ion-list>
 	<ion-item>
 		<h4>Title</h4>
@@ -22,7 +23,7 @@
 		<ion-label floating></ion-label>
 		<ion-input 
 		type="text" 
-		name="vehicle_model"
+		name="title"
 		required
 		ngModel></ion-input>
 	</ion-item>
@@ -34,7 +35,7 @@
 	<ion-item>
 		<ion-label floating></ion-label>
 		<ion-textarea 
-		name="comment"
+		name="description"
 		required
 		ngModel></ion-textarea>
 	</ion-item>
@@ -51,6 +52,7 @@
 			required></ion-datetime>
 	</ion-item>
 	<br><br>
+<!-- 	<button ion-button outline block color="danger" (click)="showmodal()">Regarding</button>
 	<ion-item>
 			<ion-label floating></ion-label>
 			<ion-select 
@@ -64,7 +66,8 @@
 				<ion-option>Orders</ion-option>
 				<ion-option>Quotes Management</ion-option>
 			</ion-select>
-		</ion-item>
+		</ion-item> -->
 	</ion-list>
 	<button color="danger" ion-button block type="submit">Add Task</button>
+	</form>
 </ion-content>

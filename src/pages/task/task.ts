@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TaskviewPage } from '../taskview/taskview'
 import { NewtaskPage } from '../newtask/newtask'
+import { formService } from '../../services/forms.service'
+import { Task } from '../../models/task.model'
 
 /**
  * Generated class for the TaskPage page.
@@ -17,15 +19,20 @@ import { NewtaskPage } from '../newtask/newtask'
 })
 export class TaskPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	tasks: Task[] = []
+
+  constructor(public navCtrl: NavController, 
+  			  public navParams: NavParams,
+  			  public formservice: formService) {
+  	this.tasks = this.formservice.getTask();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TaskPage');
   }
 
-  viewTask(){
-  	this.navCtrl.push(TaskviewPage);
+  viewTask(task: Task){
+  	this.navCtrl.push(TaskviewPage, {task: task});
   }
 
   addtask(){

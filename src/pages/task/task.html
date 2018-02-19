@@ -12,13 +12,16 @@
 
 <ion-content padding>
 	<ion-grid>
-		<ion-row (click)="viewTask()">
+		<ion-row (click)="viewTask(task)" *ngFor="let task of tasks">
 			<ion-col col-9>
-				<h6>Meeting with Group Manager</h6>
-				<ion-note> <ion-icon name="calendar" style="font-size: 18px"></ion-icon> 12th Feb</ion-note>
+				<h6>{{task.title}}</h6>
+				<ion-note> <ion-icon name="calendar" style="font-size: 18px"></ion-icon> {{ task.date }}</ion-note>
 			</ion-col>
 			<ion-col col-3>
-				<ion-icon name="arrow-round-forward"></ion-icon>
+				<ion-icon name="arrow-round-forward" item-right></ion-icon>
+			</ion-col>
+			<ion-col col-12>
+				<hr>
 			</ion-col>
 		</ion-row>
 	</ion-grid>
