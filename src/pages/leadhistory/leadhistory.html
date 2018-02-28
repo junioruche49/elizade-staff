@@ -19,7 +19,8 @@
 <ion-content padding>
   <ion-row *ngFor="let lead of leads" (click)="leadPage(lead)">
       <ion-col col-9>
-        <h3>{{ lead.CompanyName }}</h3>
+        <h5>{{ lead.CompanyName }}</h5>
+        <ion-note>{{ lead.Email }}</ion-note>
       </ion-col>
       <ion-col col-3 text-right>
         <br>
@@ -28,5 +29,9 @@
       <ion-col>
         <hr>
       </ion-col>
+    </ion-row>
+    <ion-row text-center *ngIf="leads.length < 1">
+      <br><br>
+      <h2 text-center>No items</h2>
     </ion-row>
 </ion-content>

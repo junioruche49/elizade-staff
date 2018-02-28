@@ -20,7 +20,7 @@
 	
   <ion-row *ngFor="let opportunity of opportunities" (click)="opportunityPage(opportunity)">
       <ion-col col-9>
-        <h3>{{ opportunity.CustomerName }}</h3>
+        <h5>{{ opportunity.CustomerName }}</h5>
       <ion-note>{{ opportunity.Topic }}</ion-note>
       </ion-col>
       <ion-col col-3 text-right>
@@ -30,5 +30,9 @@
       <ion-col>
         <hr>
       </ion-col>
+    </ion-row>
+    <ion-row text-center *ngIf="opportunities.length < 1">
+      <br><br>
+      <h2 text-center>No items</h2>
     </ion-row>
 </ion-content>

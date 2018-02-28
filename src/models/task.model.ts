@@ -10,14 +10,12 @@ import {quotesModel } from './quotes.model'
 export class Task{
 	constructor(public title: string,
 				public description: string,
-				public date: string){}
-
-
-				// public lead?: leadModel,
-				// public opportunity?: opportunityModel,
-				// public orders?: ordersModel,
-				// public account?: ordersModel,
-				// public quotes?: quotesModel
+				public date: string,
+				public lead?: leadModel,
+				public opportunity?: opportunityModel,
+				public orders?: ordersModel,
+				public account?: ordersModel,
+				public quotes?: quotesModel){}
 
 }
 

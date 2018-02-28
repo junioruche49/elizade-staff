@@ -21,7 +21,7 @@ import { User } from '../../models/user.model'
   templateUrl: 'ordershistory.html',
 })
 export class OrdershistoryPage {
-	orders: ordersModel[] = [];
+	orders: ordersModel[];
   User: User;
 
   constructor(public navCtrl: NavController,

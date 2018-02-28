@@ -11,11 +11,37 @@
 	<ion-grid>
 		<ion-row>
 			<ion-col>
-				<h4>{{task.title}}</h4>
+				<h6>{{task.title}}</h6>
 				<hr>
-				<h4>{{task.description}}</h4>
+				<h6>{{task.description}}</h6>
 				<hr>
-				<h4><ion-note> <ion-icon name="calendar" style="font-size: 18px"></ion-icon> {{task.date}}</ion-note></h4>
+				<h6><ion-note> <ion-icon name="calendar" style="font-size: 18px"></ion-icon> {{task.date}}</ion-note></h6>
+				<br><br>
+				<div *ngIf="task.lead">
+					<h6>Regarding</h6>
+					<button ion-button (click)="lead(task.lead)" outline color="danger">{{ task.lead.CompanyName }}</button>
+				</div>
+
+				<div *ngIf="task.opportunity">
+					<h6>Regarding</h6>
+					<button ion-button (click)="opportunity(task.opportunity)" outline color="danger">{{ task.opportunity.CustomerName }} - {{ task.opportunity.Topic }}</button>
+				</div>
+
+				<div *ngIf="task.account">
+					<h6>Regarding</h6>
+					<button ion-button (click)="account(task.account)" outline color="danger">{{ task.account.Name }} - {{ task.account.Department }}</button>
+				</div>
+
+				<div *ngIf="task.orders">
+					<h6>Regarding</h6>
+					<button ion-button (click)="orders(task.orders)" outline color="danger">{{ task.orders.customer }} </button>
+				</div>
+
+				<div *ngIf="task.quotes">
+					<h6>Regarding</h6>
+					<button ion-button (click)="quotes(task.quotes)" outline color="danger">{{ task.quotes.QuoteName }} </button>
+				</div>
+
 			</ion-col>
 		</ion-row>
 	</ion-grid>

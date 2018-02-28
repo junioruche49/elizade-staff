@@ -24,6 +24,10 @@
 				<hr>
 			</ion-col>
 		</ion-row>
+		<ion-row text-center *ngIf="tasks.length < 1">
+			<br><br>
+			<h2 text-center>No items</h2>
+		</ion-row>
 	</ion-grid>
 	<ion-fab right bottom>
     <button ion-fab color="danger" (click)="addtask()"><ion-icon name="add"></ion-icon></button>

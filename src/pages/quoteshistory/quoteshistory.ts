@@ -21,7 +21,7 @@ import { User } from '../../models/user.model'
   templateUrl: 'quoteshistory.html',
 })
 export class QuoteshistoryPage {
-	quotes: quotesModel[] = []
+	quotes: quotesModel[];
   User: User;
 
   constructor(public navCtrl: NavController, 

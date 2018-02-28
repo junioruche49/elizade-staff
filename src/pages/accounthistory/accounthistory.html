@@ -19,7 +19,7 @@
 <ion-content padding>
   <ion-row *ngFor="let account of accounts" (click)="accountPage(account)">
       <ion-col col-9>
-        <h3>{{ account.Name }}</h3>
+        <h5>{{ account.Name }}</h5>
       <ion-note>{{ account.Department }}</ion-note>
       </ion-col>
       <ion-col col-3 text-right>
@@ -29,5 +29,9 @@
       <ion-col>
         <hr>
       </ion-col>
+    </ion-row>
+    <ion-row text-center *ngIf="accounts.length < 1">
+      <br><br>
+      <h2 text-center>No items</h2>
     </ion-row>
 </ion-content>

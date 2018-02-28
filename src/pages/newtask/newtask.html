@@ -52,8 +52,11 @@
 			required></ion-datetime>
 	</ion-item>
 	<br><br>
-<!-- 	<button ion-button outline block color="danger" (click)="showmodal()">Regarding</button>
-	<ion-item>
+	<button ion-button outline block color="danger" (click)="showmodal()" type="button">Regarding</button>
+
+	<p>{{ datavalue }}</p>
+	<br>
+	<!-- <ion-item>
 			<ion-label floating></ion-label>
 			<ion-select 
 				placeholder="Regarding" 
@@ -68,6 +71,6 @@
 			</ion-select>
 		</ion-item> -->
 	</ion-list>
-	<button color="danger" ion-button block type="submit">Add Task</button>
+	<button color="danger" ion-button block type="submit" [disabled]="!f.valid">Add Task</button>
 	</form>
 </ion-content>

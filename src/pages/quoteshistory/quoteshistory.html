@@ -19,7 +19,7 @@
 <ion-content padding>
     <ion-row *ngFor="let quote of quotes" (click)="quotesPage(quote)">
       <ion-col col-9>
-        <h3>{{ quote.QuoteName }}</h3>
+        <h5>{{ quote.QuoteName }}</h5>
       <ion-note>{{ quote.Dimension }}</ion-note>
       </ion-col>
       <ion-col col-3 text-right>
@@ -29,5 +29,9 @@
       <ion-col>
         <hr>
       </ion-col>
+    </ion-row>
+    <ion-row text-center *ngIf="quotes.length < 1">
+      <br><br>
+      <h2 text-center>No items</h2>
     </ion-row>
 </ion-content>

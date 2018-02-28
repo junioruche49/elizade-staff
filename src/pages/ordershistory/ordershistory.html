@@ -19,7 +19,7 @@
 <ion-content padding>
     <ion-row *ngFor="let order of orders" (click)="ordersPage(order)">
       <ion-col col-9>
-        <h3>{{ order.name }}</h3>
+        <h5>{{ order.name }}</h5>
       <ion-note>{{ order.customer }}</ion-note>
       </ion-col>
       <ion-col col-3 text-right>
@@ -29,5 +29,9 @@
       <ion-col>
         <hr>
       </ion-col>
+    </ion-row>
+    <ion-row text-center *ngIf="orders.length < 1">
+      <br><br>
+      <h2 text-center>No items</h2>
     </ion-row>
 </ion-content>

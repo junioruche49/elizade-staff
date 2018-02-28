@@ -8,6 +8,7 @@ import { QuotePage } from '../quote/quote'
 import { ContactPage } from '../contact/contact'
 import { formService } from '../../services/forms.service'
 import { Task } from '../../models/task.model'
+import { TaskviewPage } from '../taskview/taskview'
 
 @Component({
   selector: 'page-home',
@@ -56,6 +57,10 @@ export class HomePage {
 
   gotopage(page: any){
   	this.navCtrl.push(page);
+  }
+
+  viewTask(task: Task){
+    this.navCtrl.push(TaskviewPage, {task: task});
   }
 
 }
